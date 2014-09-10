@@ -1,3 +1,116 @@
 # jQ Slider
 
 Javascript slider based on jQuery, for use with simple arrow and/or tabbed navigation
+
+---
+
+Use below HTML and Javascript
+
+```html
+	<link rel="stylesheet" type="text/css" href="basic.css"/>	
+	<link rel="stylesheet" type="text/css" href="theme.css"/><!-- add your own style -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jQslider.min.js"></script>
+
+	<div id="container"> <!-- jQslider will stretch to fit the container -->
+		<div class="jq_slider_module" style="height:600px">
+			<div class="arrow_navigation">
+				<div class="left"><p>◀</p></div>       
+				<div class="right"><p>▶</p></div>       
+			</div>
+			<div class="slides">  <!-- Enter any html between each slide div -->
+			    <div class="slide"><p>Slide 1 Content</p></div>
+			    <div class="slide"><p>Slide 2 Content</p></div>    
+			    <div class="slide"><p>Slide 3 Content</p></div>    
+			    <div class="slide"><p>Slide 4 Content</p></div>    
+			</div>       
+			<div class="tabbed_navigation">
+			  <ul>
+			    <li><p>Slide 1 Tab</p></li>       
+			    <li><p>Slide 2 Tab</p></li>
+			    <li><p>Slide 3 Tab</p></li>
+			    <li><p>Slide 4 Tab</p></li>
+			  </ul>      
+			</div>
+		</div>
+	</div>
+
+```
+
+```javascript
+
+$('.jq_slider_module').jqSlider('both', 400);
+
+```
+
+```css
+
+/* BASIC CSS */
+
+.jq_slider_module {
+	min-height:500px;
+}
+.jq_slider_module,
+.jq_slider_module .arrow_navigation,
+.jq_slider_module .tabbed_navigation {
+	overflow:hidden;
+	position:relative;
+	width: 100%;
+}
+.jq_slider_module .tabbed_navigation > ul {
+	margin:0 auto;
+	text-align:center;
+}
+.jq_slider_module .tabbed_navigation > ul:after {
+	content:"";
+	clear:both;	
+	display:block;
+}
+.jq_slider_module .tabbed_navigation > ul li {
+	overflow:hidden;
+	position:relative;
+	display:inline;
+	display:inline-block;
+	cursor:pointer;
+	margin: 0 10px;
+}
+
+.jq_slider_module .arrow_navigation {width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	z-index: auto;
+}
+.jq_slider_module .arrow_navigation > div {
+	position: relative;
+	z-index: 20; 
+	cursor: pointer;
+	top: 38%; 
+	left: auto;
+	float:left;
+} 
+.jq_slider_module .arrow_navigation > div.right {
+	float:right;
+}
+
+.jq_slider_module .slides {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:100%;
+}
+.jq_slider_module .slides > .slide {
+	float:left;
+	width:100%;
+	height:inherit;
+	text-align:center;
+	background:#F1F1F1;
+}
+.jq_slider_module .tabbed_navigation {
+	position: absolute;
+	bottom: 0;
+	left:0;
+}  
+
+```
