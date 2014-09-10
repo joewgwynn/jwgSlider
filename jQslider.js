@@ -153,4 +153,4 @@
     });
   }
 
-  $('.jq_slider_module').JsSlider('both', 400); 
+  $('.jq_slider_module').JqSlider('both', 400); 

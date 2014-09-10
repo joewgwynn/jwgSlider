@@ -1,3 +1,0 @@
-# jQ Slider
-
-Javascript slider based on jQuery, for use with simple arrow and/or tabbed navigation
