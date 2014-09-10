@@ -152,7 +152,3 @@
       (new JqSlider).init(slider, type, speed);
     });
   }
-
-$(function(){
-  $('.jq_slider_module').JqSlider('both', 400); 
-  })

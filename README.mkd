@@ -6,6 +6,7 @@ Javascript slider based on jQuery, for use with simple arrow and/or tabbed navig
 
 Use below HTML and Javascript
 
+#### HTML
 ```html
 	<link rel="stylesheet" type="text/css" href="basic.css"/>	
 	<link rel="stylesheet" type="text/css" href="theme.css"/><!-- add your own style -->
@@ -37,12 +38,14 @@ Use below HTML and Javascript
 
 ```
 
+#### Javascript
 ```javascript
 
 $('.jq_slider_module').jqSlider('both', 400);
 
 ```
 
+#### CSS
 ```css
 
 /* BASIC CSS */
