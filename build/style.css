@@ -1,0 +1,107 @@
+body,html {width:100%;padding:0;}
+
+.jq_slider_module {min-height:500px}
+.jq_slider_module,
+.jq_slider_module .arrow_navigation,
+.jq_slider_module .tabbed_navigation {
+	overflow:hidden;
+	position:relative;width: 100%;
+}
+.jq_slider_module .tabbed_navigation > ul {
+	width:980px;
+	margin:0 auto;
+}
+.jq_slider_module .tabbed_navigation > ul:after {
+	content:"";
+	clear:both;	
+	display:block;
+}
+.jq_slider_module .tabbed_navigation > ul li {
+	overflow:hidden;
+	position:relative;
+	float:left;
+	cursor:pointer;
+	opacity:0.5;
+	transition : opacity .5s;
+	-o-transition : opacity .5s;
+	-ms-transition : opacity .5s;
+	-moz-transition : opacity .5s;
+	-webkit-transition : opacity .5s;
+}
+.jq_slider_module .tabbed_navigation > ul li.current,
+.jq_slider_module .tabbed_navigation > ul li:hover  {
+	opacity:1;
+}
+
+.jq_slider_module .tabbed_navigation > ul.5_col li {
+	width:16%;
+}
+.jq_slider_module .arrow_navigation {width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+	z-index: auto;
+}
+.jq_slider_module .arrow_navigation > div {
+	position: relative;
+	z-index: 20; 
+	opacity : 0;
+	transition : opacity .5s;
+	-o-transition : opacity .5s;
+	-ms-transition : opacity .5s;
+	-moz-transition : opacity .5s;
+	-webkit-transition : opacity .5s;
+}
+.jq_slider_module .arrow_navigation > div {
+	width:auto;
+	height: 75px;
+	cursor: pointer;
+	top: 38%; 
+	background : #FFF;
+	padding : 10px;
+} 
+.jq_slider_module .arrow_navigation.on > div {
+	opacity : 0.6;
+}
+.jq_slider_module .arrow_navigation > div:hover {
+	opacity : 1;
+}
+.jq_slider_module .arrow_navigation > div > p {
+	font-size: 20px;
+	font-family: 'Arial', sans-serif;
+	position: relative;
+	line-height: 77px;
+	color: #F5A8A2;
+}
+.touch .jq_slider_module .arrow_navigation > div {
+	padding: 20px;
+	width : 30px;
+}
+.touch .jq_slider_module .arrow_navigation > div > p {
+	font-size: 25px;
+}
+.jq_slider_module .arrow_navigation > div.left {
+	padding-right : 20px; 
+	border-radius : 0 50px 50px 0;
+}
+.jq_slider_module .arrow_navigation > div.right {
+	padding-left : 20px; 
+	border-radius : 50px 0 0 50px;
+}  
+.jq_slider_module .slides {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:inherit;
+}
+.jq_slider_module .slides > .slide {
+	float:left;
+	width:100%;
+	height:inherit;
+}
+.jq_slider_module .tabbed_navigation {
+	position: absolute;
+	bottom: 0;
+	left:0;
+} 
