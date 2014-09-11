@@ -1,4 +1,4 @@
-  var JqSlider = function(){ //types = [tabs, arrows, both] 
+  var JwgSlider = function(){ //types = [tabs, arrows, both] 
     var jsS = this;
     
     
@@ -146,9 +146,9 @@
 
   }
 
-  $.fn.JqSlider = function(type, speed){ // type : tabs, arrows, both
+  $.fn.jwgSlider = function(type, speed){ // type : tabs, arrows, both
     return this.each(function(){
       var slider = $(this);
-      (new JqSlider).init(slider, type, speed);
+      (new JwgSlider).init(slider, type, speed);
     });
   }
